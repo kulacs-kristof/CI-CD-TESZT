@@ -26,6 +26,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/kulacs-kristof/cicd-test:$IMAGE_TAG
+        docker build . --file Dockerfile --tag ghcr.io/kulacs-kristof/ci-cd-test:$IMAGE_TAG
         docker login ghcr.io -u kulacs-kristof -p ${{ secrets.GHCR_TOKEN }}
         docker push ghcr.io/kulacs-kristof/ci-cd-test:$IMAGE_TAG
